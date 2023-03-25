@@ -16,6 +16,7 @@ const formErrors=Validation(values);
 SetErrors( formErrors);
 Setvalues({...values,name:'',email:'', password:''});
 console.log(values);
+
 if(errors.name==="" && errors.email ==="" && errors.password===""){
 axios.post('http://localhost:8081/signup',values).then(res=>{
   console.log(res);
